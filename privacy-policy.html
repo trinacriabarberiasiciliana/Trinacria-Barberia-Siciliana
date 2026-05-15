@@ -1,147 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Privacy Policy - Trinacria Barberia Siciliana</title>
-  </head>
-  <body>
-    <pre style="white-space: pre-wrap; font-family: Arial, sans-serif;">
-      Last updated: 13/05/2026
-      
-      1. Data Controller
-      
-      The data controller of this application is:
-      Antonino Marco Sambataro, owner of Trinacria Barberia Siciliana.
-      
-      Contact email: trinacriabarberiasiciliana@gmail.com
-      
-      2. Scope of This Policy
-      
-      This Privacy Policy applies to the application "Trinacria Barberia Siciliana", available on Android and iOS platforms.
-      
-      The application is publicly accessible and can be downloaded by any user.
-      
-      3. Information We Collect
-      
-      We collect and process the following personal data provided directly by users:
-      
-      - First name
-      - Last name
-      - Email address
-      - Phone number
-      - Password (stored in encrypted form and never in plain text)
-      
-      Additionally, we collect limited technical data required for app functionality:
-      
-      - Device push notification token
-      - Device type (Android or iOS)
-      
-      4. Purpose of Data Collection
-      
-      Collected data is used for:
-      
-      - User authentication and account management
-      - Providing access to application features
-      - Managing bookings and user interactions
-      - Sending essential emails (account confirmation and password reset)
-      - Sending push notifications related to service updates or promotions
-      - Ensuring security and proper functioning of the application
-      
-      5. Authentication System
-      
-      The application uses email and password authentication only.
-      
-      No third-party authentication providers (such as Google or Apple login) are used.
-      
-      6. Email Communications
-      
-      Email communications are handled via Gmail SMTP and are strictly limited to:
-      
-      - Account registration confirmation
-      - Password reset requests
-      
-      No marketing or promotional emails are sent via email.
-      
-      7. Push Notifications
-      
-      Push notifications are delivered using Firebase Cloud Messaging (FCM).
-      
-      These notifications may include:
-      - Appointment confirmations or updates
-      - Service-related communications
-      - Promotional or informational messages
-      
-      Users may disable notifications at the device level through system settings.
-      
-      8. Third-Party Services
-      
-      The application relies on the following third-party services:
-      
-      - Supabase: used as backend database and authentication system
-      - Firebase: used for push notifications (FCM)
-      
-      These providers may process data according to their respective privacy policies.
-      
-      9. Data Storage and Security
-      
-      All personal data is securely stored using industry-standard security measures.
-      
-      Passwords are encrypted and are never stored in readable format.
-      
-      Access to data is restricted through role-based access control and security policies (RLS).
-      
-      10. Data Retention
-      
-      Personal data is retained for as long as the user account remains active.
-      
-      When a user deletes their account from the application:
-      
-      - the account is deactivated (soft delete)
-      - data remains stored in a disabled state and is no longer accessible
-      
-      A full permanent deletion of all data can be requested via email to the data controller.
-      
-      11. User Roles and Access
-      
-      The application includes different user roles (Administrator, Employee, User).
-      
-      - Administrators can access and manage all user data and roles.
-      - Employees can access booking-related data only.
-      - Users can access only their own personal data and bookings.
-      
-      12. Data Sharing
-      
-      We do not sell or share personal data with third parties for commercial purposes.
-      
-      Data is only shared with essential service providers (Supabase and Firebase) required for application functionality.
-      
-      13. User Rights
-      
-      Users may request:
-      
-      - Access to their personal data
-      - Correction or update of their data
-      - Deletion of their account and personal data (via email request)
-      
-      Requests must be sent to the contact email listed above.
-      
-      14. Children's Privacy
-      
-      The application is publicly available and does not implement age verification mechanisms.
-      
-      While not specifically intended for children under 13 years of age, we do not knowingly target or intentionally collect data from children under 13.
-      
-      15. Changes to This Policy
-      
-      This Privacy Policy may be updated from time to time.
-      
-      Users will be informed of significant changes within the application.
-      
-      16. Contact
-      
-      For any questions regarding this Privacy Policy:
-      
-      Email: trinacriabarberiasiciliana@gmail.com
-    </pre>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - Trinacria Barberia Siciliana</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #0f0f0f;
+      --bg-soft: #171717;
+      --gold: #c8a96b;
+      --gold-soft: #e5c994;
+      --text: #f5f5f5;
+      --muted: #b5b5b5;
+      --border: rgba(255,255,255,0.08);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(980px, 92%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(10,10,10,0.75);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .logo h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: var(--gold-soft);
+      line-height: 1;
+    }
+
+    .logo span {
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      transition: 0.25s;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-soft);
+    }
+
+    main {
+      flex: 1;
+      padding: 90px 0;
+    }
+
+    .card {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      padding: 50px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--gold-soft);
+      margin-bottom: 24px;
+      font-size: 0.9rem;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      margin-bottom: 30px;
+      line-height: 1;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      font-family: 'Inter', sans-serif;
+      color: #d4d4d4;
+      line-height: 1.9;
+      font-size: 1rem;
+    }
+
+    .footer-actions {
+      margin-top: 40px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(200,169,107,0.25);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      transition: 0.25s;
+      font-size: 0.95rem;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      border-color: rgba(200,169,107,0.45);
+      color: var(--gold-soft);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+      text-align: center;
+      color: #9b9b9b;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 760px) {
+      nav {
+        height: auto;
+        padding: 18px 0;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .card {
+        padding: 32px 24px;
+      }
+
+      h2 {
+        font-size: 3rem;
+      }
+
+      .footer-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <h1>Trinacria</h1>
+          <span>Barberia Siciliana</span>
+        </div>
+
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/Trinacria-Barberia-Siciliana/privacy-policy.html">Privacy Policy</a>
+          <a href="/Trinacria-Barberia-Siciliana/delete-account.html">Delete Account</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="card">
+
+        <div class="tag">
+          Privacy & Data Protection
+        </div>
+
+        <h2>Privacy Policy</h2>
+
+<pre>
+Last updated: 13/05/2026
+
+1. Data Controller
+
+The data controller of this application is:
+Antonino Marco Sambataro, owner of Trinacria Barberia Siciliana.
+
+Contact email: trinacriabarberiasiciliana@gmail.com
+
+2. Scope of This Policy
+
+This Privacy Policy applies to the application "Trinacria Barberia Siciliana", available on Android and iOS platforms.
+
+The application is publicly accessible and can be downloaded by any user.
+
+3. Information We Collect
+
+We collect and process the following personal data provided directly by users:
+
+- First name
+- Last name
+- Email address
+- Phone number
+- Password (stored in encrypted form and never in plain text)
+
+Additionally, we collect limited technical data required for app functionality:
+
+- Device push notification token
+- Device type (Android or iOS)
+
+4. Purpose of Data Collection
+
+Collected data is used for:
+
+- User authentication and account management
+- Providing access to application features
+- Managing bookings and user interactions
+- Sending essential emails (account confirmation and password reset)
+- Sending push notifications related to service updates or promotions
+- Ensuring security and proper functioning of the application
+
+5. Authentication System
+
+The application uses email and password authentication only.
+
+No third-party authentication providers (such as Google or Apple login) are used.
+
+6. Email Communications
+
+Email communications are handled via Gmail SMTP and are strictly limited to:
+
+- Account registration confirmation
+- Password reset requests
+
+No marketing or promotional emails are sent via email.
+
+7. Push Notifications
+
+Push notifications are delivered using Firebase Cloud Messaging (FCM).
+
+These notifications may include:
+- Appointment confirmations or updates
+- Service-related communications
+- Promotional or informational messages
+
+Users may disable notifications at the device level through system settings.
+
+8. Third-Party Services
+
+The application relies on the following third-party services:
+
+- Supabase: used as backend database and authentication system
+- Firebase: used for push notifications (FCM)
+
+These providers may process data according to their respective privacy policies.
+
+9. Data Storage and Security
+
+All personal data is securely stored using industry-standard security measures.
+
+Passwords are encrypted and are never stored in readable format.
+
+Access to data is restricted through role-based access control and security policies (RLS).
+
+10. Data Retention
+
+Personal data is retained for as long as the user account remains active.
+
+When a user deletes their account from the application:
+
+- the account is deactivated (soft delete)
+- data remains stored in a disabled state and is no longer accessible
+
+A full permanent deletion of all data can be requested via email to the data controller.
+
+11. User Roles and Access
+
+The application includes different user roles (Administrator, Employee, User).
+
+- Administrators can access and manage all user data and roles.
+- Employees can access booking-related data only.
+- Users can access only their own personal data and bookings.
+
+12. Data Sharing
+
+We do not sell or share personal data with third parties for commercial purposes.
+
+Data is only shared with essential service providers (Supabase and Firebase) required for application functionality.
+
+13. User Rights
+
+Users may request:
+
+- Access to their personal data
+- Correction or update of their data
+- Deletion of their account and personal data (via email request)
+
+Requests must be sent to the contact email listed above.
+
+14. Children's Privacy
+
+The application is publicly available and does not implement age verification mechanisms.
+
+While not specifically intended for children under 13 years of age, we do not knowingly target or intentionally collect data from children under 13.
+
+15. Changes to This Policy
+
+This Privacy Policy may be updated from time to time.
+
+Users will be informed of significant changes within the application.
+
+16. Contact
+
+For any questions regarding this Privacy Policy:
+
+Email: trinacriabarberiasiciliana@gmail.com
+</pre>
+
+        <div class="footer-actions">
+          <a class="btn" href="/Trinacria-Barberia-Siciliana">← Back to Home</a>
+          <a class="btn" href="/Trinacria-Barberia-Siciliana/delete-account.html">Delete Account</a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 Trinacria Barberia Siciliana — All rights reserved.
+  </footer>
+
+</body>
 </html>

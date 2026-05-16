@@ -69,22 +69,39 @@
         }
 
         .logo {
-            padding-top: 20px;
-            padding-right: 10px;
             height: 150px;
             display: flex;
             align-items: center;
             justify-content: flex-start;
+
             overflow: hidden;
             flex-shrink: 0;
         }
 
         .logo img {
+            padding-top: 10px;
+            padding-right: 15px;
             width: 100%;
             height: 100%;
+
             object-fit: contain;
             object-position: left center;
+
             display: block;
+        }
+
+        .logo h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--gold-soft);
+            line-height: 1;
+        }
+
+        .logo span {
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            color: var(--muted);
+            text-transform: uppercase;
         }
 
         .nav-links {
@@ -371,6 +388,11 @@
         }
 
         @media (max-width: 760px) {
+            .logo {
+                width: 180px;
+                height: 52px;
+            }
+
             nav {
                 height: auto;
                 padding: 18px 0;
@@ -414,8 +436,7 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <!-- va modificato: con il logo originale -->
-                    <img src="https://vxglyjignxafpibzpmng.supabase.co/storage/v1/object/public/application/logo_firmato.png" alt="Logo Trinacria Barberia Siciliana" />
+                    <img src="https://vxglyjignxafpibzpmng.supabase.co/storage/v1/object/public/application/logo_firmato.png" alt="Logo Trinacria Barberia Siciliana" loading="lazy" draggable="false">
                 </div>
 
                 <div class="nav-links">

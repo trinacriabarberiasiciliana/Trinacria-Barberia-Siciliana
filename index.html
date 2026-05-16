@@ -1,584 +1,585 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trinacria Barberia Siciliana</title>
-  <meta name="description" content="Trinacria Barberia Siciliana - Tradizione, stile e precisione." />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trinacria Barberia Siciliana</title>
+    <meta name="description" content="Trinacria Barberia Siciliana - Tradizione, stile e precisione." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    :root {
-      --bg: #0f0f0f;
-      --bg-soft: #171717;
-      --gold: #c8a96b;
-      --gold-soft: #e5c994;
-      --text: #f5f5f5;
-      --muted: #b5b5b5;
-      --border: rgba(255,255,255,0.08);
-    }
+        :root {
+            --bg: #0f0f0f;
+            --bg-soft: #171717;
+            --gold: #c8a96b;
+            --gold-soft: #e5c994;
+            --text: #f5f5f5;
+            --muted: #b5b5b5;
+            --border: rgba(255, 255, 255, 0.08);
+        }
 
-    html {
-      scroll-behavior: smooth;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      overflow-x: hidden;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+        }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    .container {
-      width: min(1180px, 92%);
-      margin: auto;
-    }
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
 
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      backdrop-filter: blur(10px);
-      background: rgba(10,10,10,0.7);
-      border-bottom: 1px solid var(--border);
-    }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(10, 10, 10, 0.7);
+            border-bottom: 1px solid var(--border);
+        }
 
-    nav {
-      height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+        nav {
+            height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-    .logo {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
+        .logo {
+            padding-top: 20px;
+            padding-right: 10px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
 
-    .logo h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      color: var(--gold-soft);
-      line-height: 1;
-    }
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: left center;
+            display: block;
+        }
 
-    .logo span {
-      font-size: 0.75rem;
-      letter-spacing: 3px;
-      color: var(--muted);
-      text-transform: uppercase;
-    }
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
 
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      align-items: center;
-    }
+        .nav-links a {
+            color: var(--muted);
+            transition: 0.25s;
+            font-size: 0.95rem;
+        }
 
-    .nav-links a {
-      color: var(--muted);
-      transition: 0.25s;
-      font-size: 0.95rem;
-    }
+        .nav-links a:hover {
+            color: var(--gold-soft);
+        }
 
-    .nav-links a:hover {
-      color: var(--gold-soft);
-    }
+        .btn {
+            padding: 12px 22px;
+            border-radius: 999px;
+            border: 1px solid rgba(200, 169, 107, 0.35);
+            background: linear-gradient(135deg, #c8a96b, #e8d2a4);
+            color: #111;
+            font-weight: 600;
+            transition: 0.25s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
 
-    .btn {
-      padding: 12px 22px;
-      border-radius: 999px;
-      border: 1px solid rgba(200,169,107,0.35);
-      background: linear-gradient(135deg, #c8a96b, #e8d2a4);
-      color: #111;
-      font-weight: 600;
-      transition: 0.25s;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(200, 169, 107, 0.25);
+        }
 
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(200,169,107,0.25);
-    }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-    }
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                /* va modificato --> immagine di sfondo iniziale */
+                linear-gradient(to right, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.55)),
+                url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1600&auto=format&fit=crop') center/cover;
+            z-index: -2;
+        }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-      /* va modificato --> immagine di sfondo iniziale */
-        linear-gradient(to right, rgba(0,0,0,0.88), rgba(0,0,0,0.55)), 
-        url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1600&auto=format&fit=crop') center/cover;
-      z-index: -2;
-    }
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top right, rgba(200, 169, 107, 0.12), transparent 40%);
+            z-index: -1;
+        }
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top right, rgba(200,169,107,0.12), transparent 40%);
-      z-index: -1;
-    }
+        .hero-content {
+            max-width: 720px;
+            padding-top: 90px;
+        }
 
-    .hero-content {
-      max-width: 720px;
-      padding-top: 90px;
-    }
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--gold-soft);
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+        }
 
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 16px;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 999px;
-      background: rgba(255,255,255,0.04);
-      color: var(--gold-soft);
-      margin-bottom: 24px;
-      font-size: 0.9rem;
-    }
+        .hero h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3.4rem, 8vw, 6rem);
+            line-height: 0.95;
+            margin-bottom: 24px;
+        }
 
-    .hero h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(3.4rem, 8vw, 6rem);
-      line-height: 0.95;
-      margin-bottom: 24px;
-    }
+        .hero p {
+            color: #d7d7d7;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 650px;
+            margin-bottom: 36px;
+        }
 
-    .hero p {
-      color: #d7d7d7;
-      font-size: 1.1rem;
-      line-height: 1.8;
-      max-width: 650px;
-      margin-bottom: 36px;
-    }
+        .hero-actions {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
 
-    .hero-actions {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
+        .secondary-btn {
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.04);
+            color: white;
+        }
 
-    .secondary-btn {
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.04);
-      color: white;
-    }
+        section {
+            padding: 110px 0;
+        }
 
-    section {
-      padding: 110px 0;
-    }
+        .section-title {
+            margin-bottom: 55px;
+        }
 
-    .section-title {
-      margin-bottom: 55px;
-    }
+        .section-title span {
+            color: var(--gold-soft);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.82rem;
+        }
 
-    .section-title span {
-      color: var(--gold-soft);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 0.82rem;
-    }
+        .section-title h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            margin-top: 10px;
+        }
 
-    .section-title h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.4rem, 5vw, 4rem);
-      margin-top: 10px;
-    }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 50px;
+            align-items: center;
+        }
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 50px;
-      align-items: center;
-    }
+        .about-card {
+            background: var(--bg-soft);
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            padding: 40px;
+        }
 
-    .about-card {
-      background: var(--bg-soft);
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 40px;
-    }
+        .about-card p {
+            color: #cfcfcf;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
 
-    .about-card p {
-      color: #cfcfcf;
-      line-height: 1.9;
-      margin-bottom: 20px;
-    }
+        .about-image {
+            height: 100%;
+            min-height: 480px;
+            border-radius: 28px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
 
-    .about-image {
-      height: 100%;
-      min-height: 480px;
-      border-radius: 28px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-    }
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-    .about-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+        .services {
+            background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.02));
+        }
 
-    .services {
-      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.02));
-    }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
+        .service-card {
+            background: var(--bg-soft);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 32px;
+            transition: 0.3s;
+        }
 
-    .service-card {
-      background: var(--bg-soft);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 32px;
-      transition: 0.3s;
-    }
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(200, 169, 107, 0.25);
+        }
 
-    .service-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(200,169,107,0.25);
-    }
+        .service-card h4 {
+            font-size: 1.35rem;
+            margin-bottom: 14px;
+        }
 
-    .service-card h4 {
-      font-size: 1.35rem;
-      margin-bottom: 14px;
-    }
+        .service-card p {
+            color: #c7c7c7;
+            line-height: 1.8;
+        }
 
-    .service-card p {
-      color: #c7c7c7;
-      line-height: 1.8;
-    }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+        .gallery-grid img {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            transition: 0.3s;
+        }
 
-    .gallery-grid img {
-      width: 100%;
-      height: 360px;
-      object-fit: cover;
-      border-radius: 24px;
-      border: 1px solid var(--border);
-      transition: 0.3s;
-    }
+        .gallery-grid img:hover {
+            transform: scale(1.02);
+        }
 
-    .gallery-grid img:hover {
-      transform: scale(1.02);
-    }
+        .contact-box {
+            background: linear-gradient(135deg, rgba(200, 169, 107, 0.08), rgba(255, 255, 255, 0.02));
+            border: 1px solid rgba(200, 169, 107, 0.15);
+            border-radius: 32px;
+            padding: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
 
-    .contact-box {
-      background: linear-gradient(135deg, rgba(200,169,107,0.08), rgba(255,255,255,0.02));
-      border: 1px solid rgba(200,169,107,0.15);
-      border-radius: 32px;
-      padding: 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
+        .contact-info h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
 
-    .contact-info h4 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3rem;
-      margin-bottom: 16px;
-    }
+        .contact-info p {
+            color: #d0d0d0;
+            line-height: 1.8;
+            max-width: 580px;
+        }
 
-    .contact-info p {
-      color: #d0d0d0;
-      line-height: 1.8;
-      max-width: 580px;
-    }
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            min-width: 260px;
+        }
 
-    .contact-links {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      min-width: 260px;
-    }
+        .contact-links a {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border);
+            padding: 18px 20px;
+            border-radius: 18px;
+            transition: 0.25s;
+        }
 
-    .contact-links a {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--border);
-      padding: 18px 20px;
-      border-radius: 18px;
-      transition: 0.25s;
-    }
+        .contact-links a:hover {
+            border-color: rgba(200, 169, 107, 0.3);
+            transform: translateX(4px);
+        }
 
-    .contact-links a:hover {
-      border-color: rgba(200,169,107,0.3);
-      transform: translateX(4px);
-    }
+        footer {
+            padding: 35px 0;
+            border-top: 1px solid var(--border);
+            color: #9d9d9d;
+            text-align: center;
+            font-size: 0.92rem;
+        }
 
-    footer {
-      padding: 35px 0;
-      border-top: 1px solid var(--border);
-      color: #9d9d9d;
-      text-align: center;
-      font-size: 0.92rem;
-    }
+        @media (max-width: 980px) {
 
-    @media (max-width: 980px) {
-      .about-grid,
-      .services-grid,
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
+            .about-grid,
+            .services-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
 
-      .about-image {
-        min-height: 350px;
-      }
+            .about-image {
+                min-height: 350px;
+            }
 
-      .contact-box {
-        padding: 40px 28px;
-      }
-    }
+            .contact-box {
+                padding: 40px 28px;
+            }
+        }
 
-    @media (max-width: 760px) {
-      nav {
-        height: auto;
-        padding: 18px 0;
-        flex-direction: column;
-        gap: 18px;
-      }
+        @media (max-width: 760px) {
+            nav {
+                height: auto;
+                padding: 18px 0;
+                flex-direction: column;
+                gap: 18px;
+            }
 
-      .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 16px;
-      }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 16px;
+            }
 
-      .hero h2 {
-        font-size: 3.5rem;
-      }
+            .hero h2 {
+                font-size: 3.5rem;
+            }
 
-      .hero p {
-        font-size: 1rem;
-      }
+            .hero p {
+                font-size: 1rem;
+            }
 
-      .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-      }
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
 
-      .btn {
-        width: 100%;
-      }
+            .btn {
+                width: 100%;
+            }
 
-      .contact-info h4 {
-        font-size: 2.3rem;
-      }
-    }
-  </style>
+            .contact-info h4 {
+                font-size: 2.3rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">
-            <!-- va modificato: con il logo originale -->
-          <h1>Trinacria</h1>
-          <span>Barberia Siciliana</span>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <!-- va modificato: con il logo originale -->
+                    <img src="https://vxglyjignxafpibzpmng.supabase.co/storage/v1/object/public/application/logo_firmato.png" alt="Logo Trinacria Barberia Siciliana" />
+                </div>
+
+                <div class="nav-links">
+                    <a href="#chi-siamo">Chi siamo</a>
+                    <a href="#servizi">Servizi</a>
+                    <a href="#galleria">Galleria</a>
+                    <a href="#contatti">Contatti</a>
+                    <a href="/Trinacria-Barberia-Siciliana/privacy-policy.html">Privacy Policy</a>
+                    <a href="/Trinacria-Barberia-Siciliana/delete-account.html">Elimina Account</a>
+                </div>
+            </nav>
         </div>
+    </header>
 
-        <div class="nav-links">
-          <a href="#chi-siamo">Chi siamo</a>
-          <a href="#servizi">Servizi</a>
-          <a href="#galleria">Galleria</a>
-          <a href="#contatti">Contatti</a>
-          <a href="/Trinacria-Barberia-Siciliana/privacy-policy.html">Privacy Policy</a>
-          <a href="/Trinacria-Barberia-Siciliana/delete-account.html">Elimina Account</a>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="tag">
+                    Tradizione siciliana • Stile contemporaneo
+                </div>
+
+                <h2>Eleganza, precisione e identità.</h2>
+
+                <p>
+                    Trinacria Barberia Siciliana nasce dall'incontro tra la tradizione del barbiere classico e uno stile moderno, curato e autentico.
+                    Un ambiente pensato per chi cerca attenzione ai dettagli, qualità del servizio e un'esperienza personale.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="btn" href="#contatti">Contattaci</a>
+                    <a class="btn secondary-btn" href="#servizi">Scopri i servizi</a>
+                </div>
+            </div>
         </div>
-      </nav>
-    </div>
-  </header>
+    </section>
 
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div class="tag">
-          Tradizione siciliana • Stile contemporaneo
+    <section id="chi-siamo">
+        <div class="container">
+            <div class="section-title">
+                <span>La Barberia</span>
+                <h3>Tradizione e carattere siciliano</h3>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <p>
+                        Trinacria Barberia Siciliana rappresenta uno spazio dedicato alla cura dell'uomo, dove tecnica, esperienza e atmosfera si fondono in un'identità precisa.
+                    </p>
+
+                    <p>
+                        Ogni taglio e ogni servizio vengono eseguiti con attenzione, mantenendo il fascino della barberia tradizionale e uno standard estetico contemporaneo.
+                    </p>
+
+                    <p>
+                        L'obiettivo è offrire un ambiente accogliente, elegante e riconoscibile, dove ogni cliente possa sentirsi a proprio agio.
+                    </p>
+                </div>
+
+                <div class="about-image">
+                    <!-- va modificato: immagine delle macchinette e forbici sul tappetino  -->
+                    <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=1200&auto=format&fit=crop" alt="Barberia" />
+                </div>
+            </div>
         </div>
+    </section>
 
-        <h2>Eleganza, precisione e identità.</h2>
+    <section class="services" id="servizi">
+        <div class="container">
+            <div class="section-title">
+                <span>Servizi</span>
+                <h3>Esperienza, precisione e stile</h3>
+            </div>
 
-        <p>
-          Trinacria Barberia Siciliana nasce dall'incontro tra la tradizione del barbiere classico e uno stile moderno, curato e autentico.
-          Un ambiente pensato per chi cerca attenzione ai dettagli, qualità del servizio e un'esperienza personale.
-        </p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h4>Taglio Uomo</h4>
+                    <p>
+                        Tagli moderni e classici eseguiti con precisione, attenzione alle linee e valorizzazione dello stile personale.
+                    </p>
+                </div>
 
-        <div class="hero-actions">
-          <a class="btn" href="#contatti">Contattaci</a>
-          <a class="btn secondary-btn" href="#servizi">Scopri i servizi</a>
+                <div class="service-card">
+                    <h4>Barba & Rasatura</h4>
+                    <p>
+                        Definizione barba, rasatura tradizionale e cura completa del viso con tecniche professionali.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h4>Esperienza Premium</h4>
+                    <p>
+                        Un ambiente rilassato, curato nei dettagli, pensato per offrire un servizio professionale e distintivo.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="chi-siamo">
-    <div class="container">
-      <div class="section-title">
-        <span>La Barberia</span>
-        <h3>Tradizione e carattere siciliano</h3>
-      </div>
+    <section id="galleria">
+        <div class="container">
+            <div class="section-title">
+                <span>Atmosfera</span>
+                <h3>Lo stile della barberia</h3>
+            </div>
 
-      <div class="about-grid">
-        <div class="about-card">
-          <p>
-            Trinacria Barberia Siciliana rappresenta uno spazio dedicato alla cura dell'uomo, dove tecnica, esperienza e atmosfera si fondono in un'identità precisa.
-          </p>
-
-          <p>
-            Ogni taglio e ogni servizio vengono eseguiti con attenzione, mantenendo il fascino della barberia tradizionale e uno standard estetico contemporaneo.
-          </p>
-
-          <p>
-            L'obiettivo è offrire un ambiente accogliente, elegante e riconoscibile, dove ogni cliente possa sentirsi a proprio agio.
-          </p>
+            <div class="gallery-grid">
+                <!-- va modificato: queste 3 immagini -->
+                <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1200&auto=format&fit=crop" alt="Barber style" />
+                <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?q=80&w=1200&auto=format&fit=crop" alt="Barber tools" />
+                <img src="https://images.unsplash.com/photo-1622296089863-eb7fc530daa8?q=80&w=1200&auto=format&fit=crop" alt="Haircut" />
+            </div>
         </div>
+    </section>
 
-        <div class="about-image">
-            <!-- va modificato: immagine delle macchinette e forbici sul tappetino  -->
-          <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=1200&auto=format&fit=crop" alt="Barberia" />
+    <section id="contatti">
+        <div class="container">
+            <div class="contact-box">
+                <div class="contact-info">
+                    <h4>Contatti</h4>
+                    <p>
+                        Inserisci qui i tuoi recapiti ufficiali, numero di telefono, indirizzo della barberia e i collegamenti ai social network.
+                        Il sito è già pronto per essere pubblicato direttamente su GitHub Pages.
+                    </p>
+                </div>
+
+                <div class="contact-links">
+                    <a href="https://maps.app.goo.gl/EXYDy4zUhyYi5sL78" target="_blank">
+                        <i class="fa-solid fa-location-dot"></i> Via Pier Santi Mattarella 42, Piano Tavola, Belpasso, 95032
+                    </a>
+
+                    <a href="https://www.instagram.com/trinacriabarberiasiciliana" target="_blank">
+                        <i class="fa-brands fa-instagram"></i> Instagram: @trinacriabarberiasiciliana
+                    </a>
+
+                    <a href="https://tiktok.com/@trinacria_barberia" target="_blank">
+                        <i class="fa-brands fa-tiktok"></i> TikTok: @trinacria_barbereria
+                    </a>
+
+                    <a href="https://wa.me/393421962585" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp: +39 342 196 2585
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="services" id="servizi">
-    <div class="container">
-      <div class="section-title">
-        <span>Servizi</span>
-        <h3>Esperienza, precisione e stile</h3>
-      </div>
+    <footer>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:16px;">
+            <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center;">
+                <a href="/Trinacria-Barberia-Siciliana/privacy-policy.html" class="btn secondary-btn" style="padding:10px 18px; font-size:0.9rem;">
+                    Privacy Policy
+                </a>
 
-      <div class="services-grid">
-        <div class="service-card">
-          <h4>Taglio Uomo</h4>
-          <p>
-            Tagli moderni e classici eseguiti con precisione, attenzione alle linee e valorizzazione dello stile personale.
-          </p>
+                <a href="/Trinacria-Barberia-Siciliana/delete-account.html" class="btn secondary-btn" style="padding:10px 18px; font-size:0.9rem;">
+                    Elimina Account
+                </a>
+            </div>
+
+            <div>
+                © 2026 Trinacria Barberia Siciliana — Tutti i diritti riservati.
+            </div>
         </div>
-
-        <div class="service-card">
-          <h4>Barba & Rasatura</h4>
-          <p>
-            Definizione barba, rasatura tradizionale e cura completa del viso con tecniche professionali.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <h4>Esperienza Premium</h4>
-          <p>
-            Un ambiente rilassato, curato nei dettagli, pensato per offrire un servizio professionale e distintivo.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="galleria">
-    <div class="container">
-      <div class="section-title">
-        <span>Atmosfera</span>
-        <h3>Lo stile della barberia</h3>
-      </div>
-
-      <div class="gallery-grid">
-          <!-- va modificato: queste 3 immagini -->
-        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1200&auto=format&fit=crop" alt="Barber style" />
-        <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?q=80&w=1200&auto=format&fit=crop" alt="Barber tools" />
-        <img src="https://images.unsplash.com/photo-1622296089863-eb7fc530daa8?q=80&w=1200&auto=format&fit=crop" alt="Haircut" />
-      </div>
-    </div>
-  </section>
-
-  <section id="contatti">
-    <div class="container">
-      <div class="contact-box">
-        <div class="contact-info">
-          <h4>Contatti</h4>
-          <p>
-            Inserisci qui i tuoi recapiti ufficiali, numero di telefono, indirizzo della barberia e i collegamenti ai social network.
-            Il sito è già pronto per essere pubblicato direttamente su GitHub Pages.
-          </p>
-        </div>
-
-        <div class="contact-links">
-          <a href="https://maps.app.goo.gl/EXYDy4zUhyYi5sL78" target="_blank">
-            <i class="fa-solid fa-location-dot"></i> Via Pier Santi Mattarella 42, Piano Tavola, Belpasso, 95032
-          </a>
-
-          <a href="https://www.instagram.com/trinacriabarberiasiciliana" target="_blank">
-            <i class="fa-brands fa-instagram"></i> Instagram: @trinacriabarberiasiciliana
-          </a>
-          
-          <a href="https://tiktok.com/@trinacria_barberia" target="_blank">
-            <i class="fa-brands fa-tiktok"></i> TikTok: @trinacria_barbereria
-          </a>
-          
-          <a href="https://wa.me/393421962585" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp: +39 342 196 2585
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div style="display:flex; flex-direction:column; align-items:center; gap:16px;">
-      <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center;">
-        <a href="/Trinacria-Barberia-Siciliana/privacy-policy.html" class="btn secondary-btn" style="padding:10px 18px; font-size:0.9rem;">
-          Privacy Policy
-        </a>
-
-        <a href="/Trinacria-Barberia-Siciliana/delete-account.html" class="btn secondary-btn" style="padding:10px 18px; font-size:0.9rem;">
-          Elimina Account
-        </a>
-      </div>
-
-      <div>
-        © 2026 Trinacria Barberia Siciliana — Tutti i diritti riservati.
-      </div>
-    </div>
-  </footer>
+    </footer>
 
 </body>
+
 </html>

@@ -70,8 +70,7 @@
 
         /* LOGO */
         .logo {
-            width: 220px;
-            height: 65px;
+            height: 150%;
             display: flex;
             align-items: center;
             justify-content: flex-start;
@@ -87,7 +86,7 @@
             display: block;
         }
 
-        /* DESKTOP NAV */
+        /* NAV */
         .nav-links {
             display: flex;
             gap: 28px;
@@ -104,15 +103,7 @@
             color: var(--gold-soft);
         }
 
-        /* HAMBURGER */
-        .menu-toggle {
-            display: none;
-            font-size: 1.6rem;
-            color: var(--gold-soft);
-            cursor: pointer;
-        }
-
-        /* BUTTON */
+        /* BUTTONS */
         .btn {
             padding: 12px 22px;
             border-radius: 999px;
@@ -120,10 +111,17 @@
             background: linear-gradient(135deg, #c8a96b, #e8d2a4);
             color: #111;
             font-weight: 600;
+            transition: .25s ease;
         }
 
         .btn:hover {
             transform: translateY(-2px);
+        }
+
+        .secondary-btn {
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.04);
+            color: white;
         }
 
         /* HERO */
@@ -145,8 +143,23 @@
         }
 
         .hero-content {
-            padding-top: 90px;
+            padding-top: 110px;
             max-width: 720px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 10px;
+        }
+
+        .hero-actions a {
+            min-width: 180px;
+            text-align: center;
         }
 
         .tag {
@@ -158,7 +171,6 @@
             color: var(--gold-soft);
         }
 
-        /* SECTIONS */
         section {
             padding: 110px 0;
         }
@@ -175,7 +187,6 @@
             margin-top: 10px;
         }
 
-        /* GRID */
         .about-grid {
             display: grid;
             grid-template-columns: 1.1fr .9fr;
@@ -222,7 +233,6 @@
             border-radius: 24px;
         }
 
-        /* CONTACT */
         .contact-box {
             display: flex;
             justify-content: space-between;
@@ -241,29 +251,36 @@
             min-width: 260px;
         }
 
-        /* MOBILE MENU */
+        /* MOBILE */
+        .menu-toggle {
+            display: none;
+            font-size: 1.6rem;
+            color: var(--gold-soft);
+            cursor: pointer;
+        }
+
         .mobile-overlay {
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, .55);
+            background: rgba(0, 0, 0, .6);
             opacity: 0;
             visibility: hidden;
-            transition: .3s;
+            transition: .25s ease;
             z-index: 998;
         }
 
         .mobile-menu {
             position: fixed;
             top: 0;
-            left: -280px;
+            left: -300px;
             width: 280px;
             height: 100vh;
             background: var(--bg-soft);
             padding: 90px 25px;
             display: flex;
             flex-direction: column;
-            gap: 18px;
-            transition: .3s;
+            gap: 14px;
+            transition: .25s ease;
             z-index: 999;
         }
 
@@ -291,7 +308,6 @@
             color: var(--gold-soft);
         }
 
-        /* RESPONSIVE */
         @media(max-width:980px) {
 
             .about-grid,
@@ -304,8 +320,8 @@
         @media(max-width:760px) {
 
             nav {
-                flex-direction: row;
-                height: 78px;
+                position: relative;
+                justify-content: space-between;
             }
 
             .nav-links {
@@ -314,15 +330,28 @@
 
             .menu-toggle {
                 display: block;
+                margin-left: auto;
+                z-index: 2;
             }
 
             .logo {
-                width: 180px;
-                height: 52px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 150%;
             }
 
             .hero h2 {
-                font-size: 3rem;
+                font-size: 2.6rem;
+                line-height: 1.1;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .hero-actions a {
+                width: 100%;
             }
 
             .hero p {
@@ -366,6 +395,7 @@
     <div class="mobile-overlay" id="overlay" onclick="closeMenu()"></div>
 
     <div class="mobile-menu" id="mobileMenu">
+
         <div class="close-menu" onclick="closeMenu()">
             <i class="fa-solid fa-xmark"></i>
         </div>
@@ -376,17 +406,20 @@
         <a href="#contatti" onclick="closeMenu()">Contatti</a>
         <a href="/Trinacria-Barberia-Siciliana/privacy-policy.html">Privacy Policy</a>
         <a href="/Trinacria-Barberia-Siciliana/delete-account.html">Elimina Account</a>
+
     </div>
 
     <script>
         function openMenu() {
             document.getElementById("mobileMenu").classList.add("open");
             document.getElementById("overlay").classList.add("open");
+            document.body.style.overflow = "hidden";
         }
 
         function closeMenu() {
             document.getElementById("mobileMenu").classList.remove("open");
             document.getElementById("overlay").classList.remove("open");
+            document.body.style.overflow = "auto";
         }
     </script>
 
